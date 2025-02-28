@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleBackground() {
+            document.body.classList.toggle('bg-gray-200');
+            document.body.classList.toggle('bg-sky-400');
+            document.body.classList.toggle('bg-indigo-100');
+
+        }
+    </script>
+</head>
+
+<body class="mx-auto max-w-7xl bg-sky-50">
+    <nav class="bg-white shadow-md py-3 px-6 flex justify-between items-center mt-6 rounded-lg">
+        <!-- Left Side: Logo and Text -->
+        <div class="flex items-center space-x-2 py-3">
+            <img src="logo.png" alt="Logo" class="w-8 h-8">
+            <span class="text-lg font-bold text-gray-700">DevBoard</span>
+        </div>
+
+        <!-- Right Side: Number Section and Image -->
+        <div class="flex items-center space-x-4">
+            <button class="bg-blue-600 btn text-white font-semibold px-3 py-1 rounded-lg text-sm">23</button>
+            <img src="theme-btn.png" alt="Profile" class="w-8 h-8 rounded-full cursor-pointer"
+                onclick="toggleBackground()">
+        </div>
+    </nav>
+
+
+    <section>
+        <div class="flex gap-4 p-6">
+            <!-- Left Section -->
+            <div class="flex-1 bg-white p-6 shadow-md rounded-lg">
+                <div class="flex gap-3 ">
+                    <div class="bg-gray-400 flex rounded-lg w-56">
+                        <img class="py-11 px-5" src="checkbox.png" alt="">
+                        <div class="pt-8 pr-4">
+                            <p>Wed , </p>
+                            <h1>5</h1>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-400 flex rounded-lg w-96">
+                        <img class="py-5 px-5" src="board.png" alt="">
+                        <div class="pt-5 pr-4">
+                            <p>Discover Something New Today! </p>
+
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-400 flex rounded-lg w-56">
+                        <img class="py-11 px-5" src="calender.png" alt="">
+                        <div class="pt-8 pr-4">
+                            <p>Wed , </p>
+                            <h1>5</h1>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+                <!-- --------------------------------------- -->
+
+                <!-- <div class="flex ...">
+                    <div class="h-16 flex-1 ...">01</div>
+                    <div class="h-16 w-32 shrink-0 ...">02</div>
+                    <div class="h-16 flex-1 ...">03</div>
+                  </div> -->
+
+                <!-- -------------------------------------- -->
+                <div class="mt-10 grid grid-cols-3 gap-3">
+
+
+
+
+                    <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
+                        <div class="text-left ">
+
+                            <button disabled
+                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">ShopEase</button>
+
+                        </div><br>
+                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Fix Mobile Button Issue </h1><br>
+
+
+
+                        <p class="text-[#000000] bg-[#FFFFFF] font-light rounded-xl p-3 text-left -mb-3">Debug using
+                            Chrome DevTools,<br>
+                            check for overlapping-</p><br>
+
+                        <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+                        <div class="flex text-left justify-between gap-5">
+                            <div>
+                                <h3 class="text-[#000000] font-light">Deadline</h3>
+                                <h1 class="text-[#000000] font-medium">21 March 2025</h1>
+                            </div>
+                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
+                        <div class="text-left ">
+
+                            <button disabled
+                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">CloudSync</button>
+
+                        </div><br>
+                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Add Dark Mode </h1><br>
+
+
+
+                        <p class="text-[#000000] bg-[#FFFFFF] font-light rounded-xl p-3 text-left -mb-3">Store the
+                            user's preference in localStorage, update CSS </p><br>
+
+                        <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+                        <div class="flex text-left justify-between gap-5">
+                            <div>
+                                <h3 class="text-[#000000] font-light">Deadline</h3>
+                                <h1 class="text-[#000000] font-medium">21 March 2025</h1>
+                            </div>
+                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
+                        <div class="text-left ">
+
+                            <button disabled
+                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">SwiftPay</button>
+
+                        </div><br>
+                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Optimize Home page  </h1><br>
+
+
+
+                        <p class="text-[#000000] bg-[#FFFFFF] font-light rounded-xl p-3 text-left -mb-3">Debug using
+                            Chrome DevTools, check for overlapping </p><br>
+
+                        <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+                        <div class="flex text-left justify-between gap-5">
+                            <div>
+                                <h3 class="text-[#000000] font-light">Deadline</h3>
+                                <h1 class="text-[#000000] font-medium">21 March 2025</h1>
+                            </div>
+                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
+                        <div class="text-left ">
+
+                            <button disabled
+                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Meta
+                                a</button>
+
+                        </div><br>
+                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Add new emoji 🤲 </h1><br>
+
+
+
+                        <p class="text-[#000000] bg-[#FFFFFF] font-light rounded-xl p-3 text-left -mb-3">Debug using
+                            Chrome DevTools,<br>
+                            check for overlapping-</p><br>
+
+                        <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+                        <div class="flex text-left justify-between gap-5">
+                            <div>
+                                <h3 class="text-[#000000] font-light">Deadline</h3>
+                                <h1 class="text-[#000000] font-medium">21 March 2025</h1>
+                            </div>
+                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
+                        <div class="text-left ">
+
+                            <button disabled
+                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Google
+                                LLC</button>
+
+                        </div><br>
+                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Integrate OpenAI API </h1><br>
+
+
+
+                        <p class="text-[#000000] bg-[#FFFFFF] font-light rounded-xl p-3 text-left -mb-3">Debug using
+                            Chrome DevTools,<br>
+                            check for overlapping-</p><br>
+
+                        <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+                        <div class="flex text-left justify-between gap-5">
+                            <div>
+                                <h3 class="text-[#000000] font-light">Deadline</h3>
+                                <h1 class="text-[#000000] font-medium">21 March 2025</h1>
+                            </div>
+                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
+                        <div class="text-left ">
+
+                            <button disabled
+                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Glassdoar</button>
+
+                        </div><br>
+                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Improve Job searching </h1><br>
+
+
+
+                        <p class="text-[#000000] bg-[#FFFFFF] font-light rounded-xl p-3 text-left -mb-3">Debug using
+                            Chrome DevTools,<br>
+                            check for overlapping-</p><br>
+
+                        <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+                        <div class="flex text-left justify-between gap-5">
+                            <div>
+                                <h3 class="text-[#000000] font-light">Deadline</h3>
+                                <h1 class="text-[#000000] font-medium">21 March 2025</h1>
+                            </div>
+                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="w-1/4 bg-white p-6 shadow-md rounded-lg">
+
+                <div class="flex justify-center gap-5">
+
+                    <img src="activity.png" alt="">
+                    <h2 class="text-lg text-center font-semibold">Activity Log</h2>
+
+                </div>
+
+                <br>
+                
+
+                    <button class="bg-[#3752FD] text-[#ffffff] rounded-lg ml-14 px-7 py-2 btn btn-wide">Clear History</button>
+                
+                    <hr class=" border-t-2 border-dotted border-gray-400 my-4">
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
