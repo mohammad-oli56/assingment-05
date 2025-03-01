@@ -14,7 +14,7 @@
         <!-- Left Side: Logo and Text -->
         <div class="flex items-center space-x-2 py-3">
             <img src="logo.png" alt="Logo" class="w-8 h-8">
-            <span class="text-lg font-bold text-gray-700">DevBoard</span>
+            <span class="text-lg font-bold text-gray-700">Dev<span class="font-black text-black">Board</span></span>
         </div>
 
         <!-- Right Side: Number Section and Image -->
@@ -25,10 +25,10 @@
 
             <div class="flex gap-3 bg-slate-200 rounded-3xl p-3 items-center">
                 <div class="bg-gray-300">
-                <img src="checkbox.png" alt="">
+                <img  src="checkbox.png" alt="">
                 </div>
                 <div>
-                <h3 class="font-bold text-2xl"> <span id="task-count">23</span></h3>
+                <h3 class="font-bold text-2xl pr-3"> <span id="task-count">0</span></h3>
             </div>
             </div>
 
@@ -52,7 +52,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex rounded-lg w-96">
+                    <div id="windo" class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex rounded-lg w-96">
                         <img class="py-5 px-5" src="board.png" alt="">
                         <div class="pt-5 pr-4">
                             <p class="font-bold text-xl mt-3 text-white">Discover Something New Today! </p>
@@ -277,6 +277,8 @@
                 
 
                     <button id="his-btn" class="bg-[#3752FD] text-[#ffffff] rounded-lg  px-7 py-2 btn btn-wide">Clear History</button>
+
+
                     <hr class=" border-t-2 border-dotted border-gray-400 my-4">
 
                 <div id="result">
@@ -325,7 +327,7 @@
                 </div>
         
     </section>
-
+    <script src="windo.js"></script>
     <script src="history.js"></script>
     <script src="date.js"></script>
     <script src="task-2.js"></script>
