@@ -6,14 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function toggleBackground() {
-            document.body.classList.toggle('bg-gray-200');
-            document.body.classList.toggle('bg-sky-400');
-            document.body.classList.toggle('bg-indigo-100');
-
-        }
-    </script>
+   
 </head>
 
 <body class="mx-auto max-w-7xl bg-sky-50">
@@ -25,10 +18,23 @@
         </div>
 
         <!-- Right Side: Number Section and Image -->
-        <div class="flex items-center space-x-4">
-            <button class="bg-blue-600 btn text-white font-semibold px-3 py-1 rounded-lg text-sm">23</button>
-            <img src="theme-btn.png" alt="Profile" class="w-8 h-8 rounded-full cursor-pointer"
-                onclick="toggleBackground()">
+        <div class="flex items-center space-x-4 gap-4">
+
+
+            <!-- <button class="bg-blue-600 btn text-white font-semibold px-3 py-1 rounded-lg text-sm">23</button> -->
+
+            <div class="flex gap-3 bg-slate-200 rounded-3xl p-3 items-center">
+                <div class="bg-gray-300">
+                <img src="checkbox.png" alt="">
+                </div>
+                <div>
+                <h3 class="font-bold text-2xl"> <span id="task-count">23</span></h3>
+            </div>
+            </div>
+
+
+
+            <img src="theme-btn.png" alt="Profile" class="w-8 h-8 rounded-full cursor-pointer" id="themeButton">
         </div>
     </nav>
 
@@ -38,29 +44,31 @@
             <!-- Left Section -->
             <div class="flex-1 bg-white p-6 shadow-md rounded-lg">
                 <div class="flex gap-3 ">
-                    <div class="bg-gray-400 flex rounded-lg w-56">
-                        <img class="py-11 px-5" src="checkbox.png" alt="">
+                    <div class="bg-gray-200 flex rounded-lg w-56">
+                        <img class="py-11 px-5 " src="checkbox.png" alt="">
                         <div class="pt-8 pr-4">
-                            <p>Wed , </p>
-                            <h1>5</h1>
+                            <p class="font-semibold">Task Assigned</p>
+                            <h1 id="task-num" class="font-bold text-xl">6</h1>
                         </div>
                     </div>
 
-                    <div class="bg-gray-400 flex rounded-lg w-96">
+                    <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex rounded-lg w-96">
                         <img class="py-5 px-5" src="board.png" alt="">
                         <div class="pt-5 pr-4">
-                            <p>Discover Something New Today! </p>
+                            <p class="font-bold text-xl mt-3 text-white">Discover Something New Today! </p>
 
                         </div>
                     </div>
 
-                    <div class="bg-gray-400 flex rounded-lg w-56">
+                    <div class="bg-gray-200 flex rounded-lg w-56">
                         <img class="py-11 px-5" src="calender.png" alt="">
-                        <div class="pt-8 pr-4">
-                            <p>Wed , </p>
-                            <h1>5</h1>
+                        <div class="pt-8 pr-9">
+                            <p class="font-semibold" id="day">, </p>
+                            <h1 class="font-bold" id="dates"></h1>
                         </div>
                     </div>
+
+
 
 
 
@@ -86,10 +94,10 @@
                         <div class="text-left ">
 
                             <button disabled
-                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">ShopEase</button>
+                                class="bg-[#FFFFFF] font-medium text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">ShopEase</button>
 
                         </div><br>
-                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Fix Mobile Button Issue </h1><br>
+                        <h1 id="task-name-1" class="text-[#00303C]  text-left font-semibold -mb-1 ">Fix Mobile Button Issue </h1><br>
 
 
 
@@ -104,7 +112,7 @@
                                 <h3 class="text-[#000000] font-light">Deadline</h3>
                                 <h1 class="text-[#000000] font-medium">21 March 2025</h1>
                             </div>
-                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                            <button id="task-button-1" class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg ">Completed</button>
                         </div>
                     </div>
 
@@ -114,10 +122,10 @@
                         <div class="text-left ">
 
                             <button disabled
-                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">CloudSync</button>
+                                class="bg-[#FFFFFF] font-medium text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">CloudSync</button>
 
                         </div><br>
-                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Add Dark Mode </h1><br>
+                        <h1 id="task-name-2" class="text-[#00303C] text-left font-semibold -mb-1 ">Add Dark Mode </h1><br>
 
 
 
@@ -131,7 +139,7 @@
                                 <h3 class="text-[#000000] font-light">Deadline</h3>
                                 <h1 class="text-[#000000] font-medium">21 March 2025</h1>
                             </div>
-                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                            <button id="task-button-2" class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
                         </div>
                     </div>
 
@@ -141,10 +149,10 @@
                         <div class="text-left ">
 
                             <button disabled
-                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">SwiftPay</button>
+                                class="bg-[#FFFFFF] font-medium text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">SwiftPay</button>
 
                         </div><br>
-                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Optimize Home page  </h1><br>
+                        <h1 id="task-name-3" class="text-[#00303C] text-left font-semibold -mb-1 ">Optimize Home page  </h1><br>
 
 
 
@@ -158,7 +166,7 @@
                                 <h3 class="text-[#000000] font-light">Deadline</h3>
                                 <h1 class="text-[#000000] font-medium">21 March 2025</h1>
                             </div>
-                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                            <button id="task-button-3" class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
                         </div>
                     </div>
 
@@ -166,12 +174,12 @@
                     <div class="bg-gray-100 text-center p-3 rounded-xl gap-y-6">
                         <div class="text-left ">
 
-                            <button disabled
-                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Meta
-                                a</button>
+                            <button  disabled
+                                class="bg-[#FFFFFF] font-medium text-[#000000] px-5 py-2 rounded-lg text-center -mb-3 ">Meta
+                                </button>
 
                         </div><br>
-                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Add new emoji 🤲 </h1><br>
+                        <h1 id="task-name-4" class="text-[#00303C] text-left font-semibold -mb-1 ">Add new emoji 🤲 </h1><br>
 
 
 
@@ -186,7 +194,7 @@
                                 <h3 class="text-[#000000] font-light">Deadline</h3>
                                 <h1 class="text-[#000000] font-medium">21 March 2025</h1>
                             </div>
-                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                            <button id="task-button-4" class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
                         </div>
                     </div>
 
@@ -196,11 +204,11 @@
                         <div class="text-left ">
 
                             <button disabled
-                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Google
+                                class="bg-[#FFFFFF] font-medium text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Google
                                 LLC</button>
 
                         </div><br>
-                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Integrate OpenAI API </h1><br>
+                        <h1 id="task-name-5" class="text-[#00303C] text-left font-semibold -mb-1 ">Integrate OpenAI API </h1><br>
 
 
 
@@ -215,7 +223,7 @@
                                 <h3 class="text-[#000000] font-light">Deadline</h3>
                                 <h1 class="text-[#000000] font-medium">21 March 2025</h1>
                             </div>
-                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                            <button id="task-button-5" class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
                         </div>
                     </div>
 
@@ -225,10 +233,10 @@
                         <div class="text-left ">
 
                             <button disabled
-                                class="bg-[#FFFFFF] text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Glassdoar</button>
+                                class="bg-[#FFFFFF] font-medium text-[#000000] px-5 py-2 rounded-lg text-center -mb-3">Glassdoar</button>
 
                         </div><br>
-                        <h1 class="text-[#00303C] text-left font-semibold -mb-1 ">Improve Job searching </h1><br>
+                        <h1 id="task-name-6" class="text-[#00303C] text-left font-semibold -mb-1 ">Improve Job searching </h1><br>
 
 
 
@@ -243,7 +251,7 @@
                                 <h3 class="text-[#000000] font-light">Deadline</h3>
                                 <h1 class="text-[#000000] font-medium">21 March 2025</h1>
                             </div>
-                            <button class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
+                            <button id="task-button-6" class="bg-[#3752FD] text-[#ffffff] px-6 rounded-lg">Completed</button>
                         </div>
                     </div>
 
@@ -251,25 +259,77 @@
             </div>
 
             <!-- Right Section -->
+
+
             <div class="w-1/4 bg-white p-6 shadow-md rounded-lg">
+
+               <div class="text-center">
+
 
                 <div class="flex justify-center gap-5">
 
                     <img src="activity.png" alt="">
-                    <h2 class="text-lg text-center font-semibold">Activity Log</h2>
+                    <h2 class="text-lg  font-semibold">Activity Log</h2>
 
                 </div>
 
                 <br>
                 
 
-                    <button class="bg-[#3752FD] text-[#ffffff] rounded-lg ml-14 px-7 py-2 btn btn-wide">Clear History</button>
-                
+                    <button id="his-btn" class="bg-[#3752FD] text-[#ffffff] rounded-lg  px-7 py-2 btn btn-wide">Clear History</button>
                     <hr class=" border-t-2 border-dotted border-gray-400 my-4">
 
-            </div>
-        </div>
+                <div id="result">
+
+                    
+                    <div id="message" class="text-[#00303C]">
+                        
+                    </div>
+   
+                    <hr id="rh" class="border-t-2 border-dotted border-gray-200 my-4" style="display: none;">
+                    
+                    <div id="message1" class="text-[#00303C]">
+                           
+                    </div>
+
+
+                    <hr id="rh1" class="border-t-2 border-dotted border-gray-200 my-4" style="display: none;">
+
+
+                    <div id="message2" class="text-[#00303C]">
+                           
+                    </div>
+
+                    <hr id="rh2" class="border-t-2 border-dotted border-gray-200 my-4" style="display: none;">
+
+
+                    <div id="message3" class="text-[#00303C]">
+                           
+                    </div>
+
+                    <hr id="rh3" class="border-t-2 border-dotted border-gray-200 my-4" style="display: none;">
+
+
+                    <div id="message4" class="text-[#00303C]">
+                           
+                    </div>
+                    
+                    <hr id="rh4" class="border-t-2 border-dotted border-gray-200 my-4" style="display: none;">
+   
+
+                    <div id="message5" class="text-[#00303C]">
+                           
+                    </div>
+
+
+                </div>
+        
     </section>
+
+    <script src="history.js"></script>
+    <script src="date.js"></script>
+    <script src="task-2.js"></script>
+    <script src="color.js"></script>
 </body>
 
 </html>
