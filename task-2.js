@@ -23,8 +23,8 @@ document.getElementById("task-button-1")
         const message = document.getElementById("message");
 
 
-        const hr=document.getElementById("rh")
-        hr.style.display = "block";
+        const hr0=document.getElementById("rh0")
+        hr0.style.display = "block";
 
         const newTaskNum = parseInt(taskNum.textContent);
         const newTaskCount = parseInt(taskCount.textContent);
