@@ -234,7 +234,7 @@ document.getElementById("task-button-2")
             const formattedTime = formatTime();
             const titleSet = name; 
 
-            
+            alert("congrates!! You have completed all the current task")
            
             message5.innerHTML = `You have completed the task <strong>${titleSet}</strong> issue at ${formattedTime}`;
             message5.style.display = "block"; 
